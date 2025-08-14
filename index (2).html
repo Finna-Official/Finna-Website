@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finna AI Investing</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f9ff; color: #333; }
+header, footer { background-color: #1ecbe1; color: white; padding: 20px; text-align: center; }
+header h1 { margin: 0; }
+nav { margin-top: 8px; }
+nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+nav a:hover { text-decoration: underline; }
+section { padding: 20px; max-width: 900px; margin: auto; }
+h2 { margin-top: 0; }
+input, textarea, button, select { display: block; margin: 10px 0; padding: 10px; width: 100%; max-width: 420px; border-radius: 6px; }
+button { background-color: #1ecbe1; color: white; border: none; cursor: pointer; }
+button:hover { background-color: #17a9bb; }
+p.small { color:#555; font-size:.9rem; }
+.hr { height: 1px; background: #dbe4ff; border: 0; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Finna AI Investing</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#founder">Founder</a>
+    <a href="#live-performance">Live Performance</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>Welcome to Finna</h2>
+  <p>Finna is an AI-powered investing co-pilot for first-time investors. Get personalized guidance, build risk-optimized portfolios, and learn in real-time.</p>
+  <form id="signupForm">
+    <label for="email">Sign up for updates:</label>
+    <input type="email" id="email" placeholder="Your email" required>
+    <button type="submit">Sign Up</button>
+  </form>
+  <p id="signupMessage"></p>
+  <p class="small">This page is for information only and is not investment advice.</p>
+</section>
+
+<section id="about">
+  <h2>About Finna</h2>
+  <p>Finna is designed to help Gen Z investors take control of their financial future. With AI guidance, you can start investing confidently without needing a business degree.</p>
+  <ul>
+    <li>Personalized AI guidance</li>
+    <li>Risk-optimized portfolios</li>
+    <li>Real-time financial learning</li>
+    <li>Integrated execution via third-party APIs</li>
+  </ul>
+</section>
+
+<section id="founder">
+  <h2>Founder</h2>
+  <p><strong>Name:</strong> Fred Cowley</p>
+  <p><strong>Age:</strong> 13</p>
+  <p><strong>Location:</strong> Poole, UK</p>
+  <p><strong>Role:</strong> Founder of Finna</p>
+  <p><strong>Email:</strong> <a href="mailto:fredcowley2012@icloud.com">fredcowley2012@icloud.com</a></p>
+  <hr class="hr">
+  <p>Fred started Finna to help first-time investors build confidence and learn the basics of smart, long-term investing. The goal is simple: clear steps, plain-English guidance, and tools that make getting started easier.</p>
+</section>
+
+<section id="live-performance">
+  <h2>Live Performance</h2>
+  <!-- Intentionally left empty as requested. -->
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="small">You can also email directly at <a href="mailto:fredcowley2012@icloud.com">fredcowley2012@icloud.com</a>.</p>
+  <form id="contactForm">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" required>
+    <label for="userEmail">Your Email:</label>
+    <input type="email" id="userEmail" required>
+    <label for="message">Message:</label>
+    <textarea id="message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="contactMessage"></p>
+</section>
+
+<footer>
+  <p>© 2025 Finna AI Investing</p>
+</footer>
+
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('email').value;
+    document.getElementById('signupMessage').innerText = 'Thanks, ' + email + '! You are signed up.';
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var userName = document.getElementById('name').value;
+    var userEmail = document.getElementById('userEmail').value;
+    var message = document.getElementById('message').value;
+    document.getElementById('contactMessage').innerText = 'Thanks, ' + userName + '! Your message has been received.';
+});
+</script>
+
+</body>
+</html>
